@@ -101,6 +101,58 @@ $footer_partners = [
 ];
 ?>
 
+<nav class="mobile-nav" aria-label="<?php esc_attr_e('Mobile navigation', 'aphrodite-test'); ?>">
+    <div class="mobile-nav__shell">
+        <div class="mobile-nav__bg" aria-hidden="true">
+            <svg class="mobile-nav__bg-border" xmlns="http://www.w3.org/2000/svg" width="71" height="56" viewBox="0 0 71 56" fill="none">
+                <path d="M62.8857 5.00098C62.8857 2.38725 64.8644 0.00025546 67.5154 0H71V56H0V0H3.48463L3.73027 0.00683594C6.25693 0.149063 8.11429 2.46863 8.11429 5.00098C8.11429 19.9127 20.3753 32.001 35.5 32.001C50.6247 32.001 62.8857 19.9127 62.8857 5.00098ZM63.9 5.00098C63.9 20.4649 51.1849 33.001 35.5 33.001C19.8151 33.001 7.1 20.4649 7.1 5.00098C7.1 2.8178 5.45948 1.00026 3.48463 1H0V55H71V1H67.5154C65.5405 1.00026 63.9 2.8178 63.9 5.00098Z" fill="currentColor"></path>
+            </svg>
+            <svg class="mobile-nav__bg-fill" xmlns="http://www.w3.org/2000/svg" width="71" height="56" viewBox="0 0 71 56" fill="none">
+                <path d="M71 56H0V0H3.4842C6.1354 0 8.11429 2.38711 8.11429 5.00098C8.11429 19.9127 20.3753 32.001 35.5 32.001C50.6247 32.001 62.8857 19.9127 62.8857 5.00098C62.8857 2.38711 64.8646 0 67.5158 0H71V56Z" fill="currentColor"></path>
+            </svg>
+        </div>
+
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item">
+                <a href="#slots-title" class="mobile-nav__link">
+                    <img src="https://aphrodite8.casino/assets/themes/aphrodite/icons/casino.svg" alt="" aria-hidden="true">
+                    <span>Casino</span>
+                </a>
+            </li>
+
+            <li class="mobile-nav__item">
+                <a href="#advantages-title" class="mobile-nav__link">
+                    <img src="https://aphrodite8.casino/assets/themes/aphrodite/icons/live-casino.svg" alt="" aria-hidden="true">
+                    <span>Live</span>
+                </a>
+            </li>
+
+            <li class="mobile-nav__item mobile-nav__item--main">
+                <a href="#hero-join-link" class="mobile-nav__link">
+                    <span class="mobile-nav__button">
+                        <img src="https://aphrodite8.casino/assets/themes/aphrodite/icons/sign-up.svg" alt="" aria-hidden="true">
+                    </span>
+                    <span>Join</span>
+                </a>
+            </li>
+
+            <li class="mobile-nav__item">
+                <button class="mobile-nav__link mobile-nav__link--button js-mobile-search-toggle" type="button" aria-controls="mobile-search" aria-expanded="false">
+                    <img src="https://aphrodite8.casino/assets/themes/aphrodite/icons/search.svg" alt="" aria-hidden="true">
+                    <span>Search</span>
+                </button>
+            </li>
+
+            <li class="mobile-nav__item">
+                <a href="#hero-title" class="mobile-nav__link">
+                    <img src="https://aphrodite8.casino/assets/themes/aphrodite/icons/promotions.svg" alt="" aria-hidden="true">
+                    <span>Promo</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <footer class="site-footer" aria-label="<?php esc_attr_e('Site footer', 'aphrodite-test'); ?>">
     <div class="site-footer__inner">
         <section class="site-footer__strip site-footer__strip--payments" aria-label="<?php esc_attr_e('Payment methods', 'aphrodite-test'); ?>">

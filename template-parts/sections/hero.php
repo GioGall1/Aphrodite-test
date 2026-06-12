@@ -11,7 +11,7 @@
         </p>
 
         <div class="hero__actions">
-            <a class="button button--primary button--large" href="#">Jouer maintenant</a>
+            <a id="hero-join-link" class="button button--primary button--large" href="#">Jouer maintenant</a>
             <a class="button button--ghost button--large" href="#">Voir les bonus</a>
         </div>
     </div>
