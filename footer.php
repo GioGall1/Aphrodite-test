@@ -208,15 +208,21 @@ $footer_partners = [
 
             <nav class="footer-nav" aria-label="<?php esc_attr_e('Footer navigation', 'aphrodite-test'); ?>">
                 <?php foreach ($footer_columns as $column_title => $items) : ?>
-                    <section class="footer-nav__column" aria-label="<?php echo esc_attr($column_title); ?>">
-                        <h2 class="footer-nav__title"><?php echo esc_html($column_title); ?></h2>
-                        <ul class="footer-nav__list">
-                            <?php foreach ($items as $item) : ?>
-                                <li class="footer-nav__item">
-                                    <a href="#"><?php echo esc_html($item); ?></a>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
+                    <section class="footer-nav__column js-footer-accordion" aria-label="<?php echo esc_attr($column_title); ?>">
+                        <button class="footer-nav__toggle js-footer-accordion-toggle" type="button" aria-expanded="false">
+                            <span class="footer-nav__title"><?php echo esc_html($column_title); ?></span>
+                            <span class="footer-nav__chevron" aria-hidden="true">⌄</span>
+                        </button>
+
+                        <div class="footer-nav__panel">
+                            <ul class="footer-nav__list">
+                                <?php foreach ($items as $item) : ?>
+                                    <li class="footer-nav__item">
+                                        <a href="#"><?php echo esc_html($item); ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
                     </section>
                 <?php endforeach; ?>
             </nav>

@@ -4,6 +4,7 @@ const mobileSearchInput = document.querySelector("#mobile-search-input");
 const mobileSearchToggles = document.querySelectorAll(".js-mobile-search-toggle");
 const mobileMenuToggles = document.querySelectorAll(".js-mobile-menu-toggle");
 const mobileMenuCloses = document.querySelectorAll(".js-mobile-menu-close");
+const footerAccordionToggles = document.querySelectorAll(".js-footer-accordion-toggle");
 
 const setMobileSearchState = (isOpen) => {
     body.classList.toggle("is-mobile-search-open", isOpen);
@@ -66,3 +67,46 @@ document.addEventListener("keydown", (event) => {
         setMobileMenuState(false);
     }
 });
+
+if (footerAccordionToggles.length) {
+    const footerAccordionMedia = window.matchMedia("(max-width: 1279px)");
+
+    const setFooterAccordionState = (toggle, isOpen) => {
+        const column = toggle.closest(".js-footer-accordion");
+
+        if (!column) {
+            return;
+        }
+
+        column.classList.toggle("is-open", isOpen);
+        toggle.setAttribute("aria-expanded", String(isOpen));
+    };
+
+    footerAccordionToggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+            if (!footerAccordionMedia.matches) {
+                return;
+            }
+
+            const column = toggle.closest(".js-footer-accordion");
+            const willOpen = !column?.classList.contains("is-open");
+
+            footerAccordionToggles.forEach((otherToggle) => {
+                setFooterAccordionState(otherToggle, false);
+            });
+
+            setFooterAccordionState(toggle, willOpen);
+        });
+    });
+
+    const syncFooterAccordion = () => {
+        if (!footerAccordionMedia.matches) {
+            footerAccordionToggles.forEach((toggle) => {
+                setFooterAccordionState(toggle, false);
+            });
+        }
+    };
+
+    syncFooterAccordion();
+    footerAccordionMedia.addEventListener("change", syncFooterAccordion);
+}
